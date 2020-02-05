@@ -1,13 +1,13 @@
 <%= form_for(group) do |g| %>
   <div>
-    <%=g.label :title, "群組名稱" %>
-    <%=g.text_field :title %>
+    <%= g.label :title, '群組名稱' %>
+    <%= g.text_field :title %>
   </div>
 
   <div>
-    <%=g.label :description, "敘述" %>
-    <%=g.text_area :description %>
+    <%= g.label :description, '敘述' %>
+    <%= g.text_area :description %>
   </div>
-
+  
   <%= g.submit %>
 <% end %>

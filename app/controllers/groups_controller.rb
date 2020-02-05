@@ -1,5 +1,11 @@
 class GroupsController < ApplicationController
+  before_action :find_params, only: [:edit, :update, :destroy]
+
   def index
+    @group = Group.all
+  end
+
+  def show
     @group = Group.all
   end
 
@@ -18,11 +24,9 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Group.find_by(id: params[:id])
   end
   
   def update
-    @group = Group.find_by(id: params[:id])
 
     if @group.update(group_params)
       redirect_to root_path, notice: "更新群組成功！"
@@ -32,13 +36,16 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-    @group = Group.find_by(id: params[:id])
-    @group.destroy if @group
+    @group.destroy
     redirect_to root_path, notice: "刪除群組成功！"
   end
 
   private
   def group_params
     params.require(:group).permit(:title, :description)
+  end
+
+  def find_params
+    @group = Group.find(params[:id])
   end
 end
