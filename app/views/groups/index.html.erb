@@ -16,7 +16,9 @@
       <td><%= group.description %></td>
       <td>
         <%= link_to "編輯", edit_group_path(group) %>
-        <%= link_to "刪除", group_path(group), method: "delete", data: { confirm:"確認要刪除嗎？" } %>
+        <%= link_to "刪除", group_path(group), 
+            method: "delete", 
+            data: { confirm:"確認要刪除嗎？" } %>
       </td>
     </tr>
     <% end %>

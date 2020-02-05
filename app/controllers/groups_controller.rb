@@ -1,12 +1,12 @@
 class GroupsController < ApplicationController
-  before_action :find_params, only: [:edit, :update, :destroy]
+  before_action :find_params, only: [:show, :edit, :update, :destroy]
 
   def index
     @group = Group.all
   end
 
   def show
-    @group = Group.all
+    @posts = @group.posts
   end
 
   def new
