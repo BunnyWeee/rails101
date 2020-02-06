@@ -7,18 +7,22 @@
     <tr>
       <td>群組名稱</td>
       <td>敘述</td>
+      <td>建立者</td>
     </tr>
   </thead>
   <tbody>
     <% @group.each do |group| %>
     <tr>
-      <td><%= group.title %></td>
+      <td><%= link_to "#{group.title}", group_path(group) %></td>
       <td><%= group.description %></td>
+      <td><%= group.user.name %></td>
       <td>
+        <% if current_user.id == group.user.id %>
         <%= link_to "編輯", edit_group_path(group) %>
         <%= link_to "刪除", group_path(group), 
             method: "delete", 
             data: { confirm:"確認要刪除嗎？" } %>
+        <% end %>
       </td>
     </tr>
     <% end %>
