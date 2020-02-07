@@ -10,7 +10,10 @@
   </head>
 
   <body>
-    <%= notice %>
+   <%= render "frontend/navbar" %> 
+   <div class= "alert alert-info" >
+     <%= notice %>
+   </div>
     <%= yield %>
   </body>
 </html>
