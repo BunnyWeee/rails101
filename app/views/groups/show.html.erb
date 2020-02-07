@@ -22,7 +22,7 @@
       <td><%= post.content %></td>
       <td><%= post.user.name %></td>
       <td>
-        <% if current_user == @group.user || current_user == post.user%>
+        <% if [@group.user, post.user].include?(current_user) %>
         <%= link_to "編輯貼文", edit_group_post_path(post.group, post) %>
         <%= link_to "刪除貼文", group_post_path(post.group, post),
             method: "delete",
