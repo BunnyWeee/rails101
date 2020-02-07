@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :member_required, only: [:new, :create]
+
   def new
     @post = @group.posts.build
   end
@@ -48,9 +49,8 @@ class PostsController < ApplicationController
   end
 
   def member_required
-    if !current_user.is_member_of?(@group)
+    return if current_user.is_member_of?(@group)
       flash.notice = "你不是這個群組的會員！"
-      redirect_to group_path(@group)
-    end
+      redirect_to root_path(@group)
   end
 end

@@ -59,7 +59,7 @@ class GroupsController < ApplicationController
     else
       flash.notice = "你不是這個群組的成員！"
     end
-    redirect_to group_path(@group)
+    redirect_to root_path(@group)
   end
 
   private
