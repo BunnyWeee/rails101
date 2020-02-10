@@ -1,6 +1,6 @@
 <nav>
   <% if user_signed_in? %>
-    <%= "hi, #{current_user.name}" %>
+    <%= link_to "hi, #{current_user.name}", account_groups_path %>
     <%= link_to '登出', destroy_user_session_path, method: 'delete' %>
   <% else %>
     <%= link_to "註冊", new_registration_path(@user) %>

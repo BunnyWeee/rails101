@@ -1,0 +1,31 @@
+<h1>我的貼文</h1>
+
+<%= link_to "返回群組列表", root_path %>
+<%= link_to "我的群組", account_groups_path %>
+
+<table>
+  <thead>
+    <tr>
+      <td>貼文內容</td>
+      <td>群組名稱</td>
+      <td>最後更新</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.content %></td>
+        <td><%= post.group.title %></td>
+        <td><%= post.updated_at %></td>
+        <td>
+          <%= link_to "編輯貼文",
+              edit_group_post_path(post.group, post) %>
+          <%= link_to "刪除貼文",
+              group_post_path(post.group, post),
+              method: "delete",
+              data: { confirm: "確定刪除貼文嗎？" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

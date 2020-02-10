@@ -1,0 +1,25 @@
+<h1>我的群組</h1>
+
+<%= link_to "返回群組列表", root_path %>
+<%= link_to "我的貼文", account_posts_path %>
+
+<table>
+  <thead>
+    <tr>
+      <td>群組名稱</td>
+      <td>群組敘述</td>
+      <td>貼文數</td>
+      <td>最後更新</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @groups.each do |group| %>
+      <tr>
+        <td><%= link_to "#{group.title}", group_path(group) %></td>
+        <td><%= group.description %></td>
+        <td><%= group.posts.size %></td>
+        <td><%= group.updated_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
