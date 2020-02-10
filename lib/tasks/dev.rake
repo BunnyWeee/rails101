@@ -5,5 +5,5 @@ namespace :dev do
                   "db:drop",
                   "db:create",
                   "db:migrate"]
-  task :rebuild => ["dev:build," "db:seed"]
+  task :rebuild => ["dev:build", "db:seed"]
 end
