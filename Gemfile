@@ -5,6 +5,7 @@ ruby '2.6.3'
 gem 'devise'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'faker', '~> 2.10', '>= 2.10.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
