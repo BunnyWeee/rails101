@@ -1,4 +1,4 @@
 class Post < ApplicationRecord
-  belongs_to :group
+  belongs_to :group, counter_cache: true
   belongs_to :user
 end
