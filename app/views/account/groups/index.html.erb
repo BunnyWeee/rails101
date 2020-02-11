@@ -3,7 +3,7 @@
 <%= link_to "返回群組列表", root_path %>
 <%= link_to "我的貼文", account_posts_path %>
 
-<table>
+<table class="table" >
   <thead>
     <tr>
       <td>群組名稱</td>
@@ -18,7 +18,7 @@
         <td><%= link_to "#{group.title}", group_path(group) %></td>
         <td><%= group.description %></td>
         <td><%= group.posts.size %></td>
-        <td><%= group.updated_at %></td>
+        <td><%= group.updated_at.to_s(:short) %></td>
       </tr>
     <% end %>
   </tbody>

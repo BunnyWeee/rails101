@@ -1,12 +1,10 @@
-<%= form_for(group) do |g| %>
+<%= simple_form_for(group) do |g| %>
   <div>
-    <%= g.label :title, '群組名稱' %>
-    <%= g.text_field :title %>
+    <%= g.input :title, label: "群組名稱" %>
   </div>
 
   <div>
-    <%= g.label :description, '敘述' %>
-    <%= g.text_area :description %>
+    <%= g.input :description, label: "敘述" %>
   </div>
   
   <%= g.submit %>
