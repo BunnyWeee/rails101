@@ -47,6 +47,7 @@ group :development do
   gem 'pry', '~> 0.12.2'
   gem 'capistrano', '~> 3.12', require: false
   gem 'capistrano-bundler', '~> 1.6'
+  gem 'capistrano-rails', '~> 1.4', require: false
 end
 
 group :test do
