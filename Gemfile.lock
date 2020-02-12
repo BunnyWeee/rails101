@@ -78,6 +78,8 @@ GEM
       sshkit (>= 1.9.0)
     capistrano-bundler (1.6.0)
       capistrano (~> 3.1)
+    capistrano-passenger (0.2.0)
+      capistrano (~> 3.0)
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -252,6 +254,7 @@ DEPENDENCIES
   byebug
   capistrano (~> 3.12)
   capistrano-bundler (~> 1.6)
+  capistrano-passenger
   capistrano-rails (~> 1.4)
   capybara (>= 2.15)
   devise

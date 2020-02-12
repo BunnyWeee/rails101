@@ -48,6 +48,7 @@ group :development do
   gem 'capistrano', '~> 3.12', require: false
   gem 'capistrano-bundler', '~> 1.6'
   gem 'capistrano-rails', '~> 1.4', require: false
+  gem 'capistrano-passenger'
 end
 
 group :test do
