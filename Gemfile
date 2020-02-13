@@ -50,6 +50,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.4', require: false
   gem 'capistrano-passenger'
   gem 'ed25519'
+  gem 'bcrypt_pbkdf', '~> 1.0', '>= 1.0.1'
 end
 
 group :test do
