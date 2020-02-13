@@ -8,13 +8,13 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 set :rails_env, :production
 
-set :branch, :master
+set :branch, 't21555'
 
 set :deploy_to, '/home/deploy/rails101'
 
-role :app, %w[deploy@13.231.49.156]
-role :web, %w[deploy@13.231.49.156]
-role :db,  %w[deploy@13.231.49.156]
+role :app, %w[apps@13.231.49.156]
+role :web, %w[apps@13.231.49.156]
+role :db,  %w[apps@13.231.49.156]
 
 
 # role-based syntax

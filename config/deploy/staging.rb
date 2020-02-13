@@ -12,9 +12,9 @@ set :branch, 't21555'
 
 set :deploy_to, '/home/deploy/staging'
 
-role :web, %w{deploy@13.231.49.156}
-role :db, %w{deploy@13.231.49.156}
-role :app, %w{deploy@13.231.49.156}
+role :web, %w{apps@13.231.49.156}
+role :db, %w{apps@13.231.49.156}
+role :app, %w{apps@13.231.49.156}
 
 
 # role-based syntax
