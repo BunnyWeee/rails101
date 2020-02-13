@@ -12,10 +12,14 @@ set :branch, 't21555'
 
 set :deploy_to, '/home/deploy/staging'
 
-role :web, %w{deploy@13.231.49.156}
-role :db, %w{deploy@13.231.49.156}
-role :app, %w{deploy@13.231.49.156}
+role :web, %w{deploy@13.231.186.174}
+role :db, %w{deploy@13.231.186.174}
+role :app, %w{deploy@13.231.186.174}
 
+set :ssh_options, {
+  user: 'deploy',
+  forward_agent: true
+}
 
 # role-based syntax
 # ==================
