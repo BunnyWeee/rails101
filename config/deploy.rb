@@ -6,9 +6,8 @@ set :repo_url, "git@github.com:BunnyWeee/rails101.git"
 set :deploy_to, '/home/deploy/rails101'
 set :assets_roles, [:web, :app]
 set :rbenv_type, :user # or :system, depends on your rbenv setup
-
 set :rbenv_ruby, '2.6.3'
-
+set :rbenv_path, "/usr/local/rbenv" 
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
