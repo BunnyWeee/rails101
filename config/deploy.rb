@@ -3,7 +3,7 @@ lock "~> 3.12.0"
 
 set :application, "rails101"
 set :repo_url, "git@github.com:BunnyWeee/rails101.git"
-set :deploy_to, "home/deploy/rail/rails101"
+set :deploy_to, '/home/deploy/rails101'
 set :assets_roles, [:web, :app]
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 
