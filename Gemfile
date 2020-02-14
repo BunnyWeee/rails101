@@ -50,7 +50,6 @@ group :development do
   gem 'capistrano-rails', '~> 1.4', require: false
   gem 'capistrano-passenger'
   gem 'capistrano-rbenv', '~> 2.1'
-  gem 'ed25519'
   gem 'bcrypt_pbkdf', '~> 1.0', '>= 1.0.1'
 end
 
