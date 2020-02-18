@@ -10,14 +10,13 @@ set :rails_env, 'production'
 
 set :branch, 't21555'
 
-set :deploy_to, '/home/deploy/rails101'
+set :deploy_to, '/home/apps/rails101'
 set :keep_releases, 10
-role :app, %w[deploy@13.231.186.174]
-role :web, %w[deploy@13.231.186.174]
-role :db,  %w[deploy@13.231.186.174], primary: true
+role :app, %w[apps@54.238.201.191]
+role :web, %w[apps@54.238.201.191]
+role :db,  %w[apps@54.238.201.191], primary: true
 
 set :ssh_options, {
-  user: 'deploy',
   forward_agent: true,
   port: 22
 }

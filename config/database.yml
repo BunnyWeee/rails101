@@ -4,7 +4,7 @@ development:
   database: demo_development
   host: localhost
   username: root
-  password: '123456'
+  password: 'password'
 
 test:
   adapter: mysql2
@@ -12,7 +12,7 @@ test:
   database: demo_test
   host: localhost
   username: root
-  password: '123456'
+  password: 'password'
 
 production:
   adapter: mysql2
@@ -20,4 +20,4 @@ production:
   database: demo_production
   host: localhost
   username: root
-  password: '123456'
+  password: 'password'
